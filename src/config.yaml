@@ -7,7 +7,7 @@ dataset:
 
 xgboost:
   execution:
-    exp_id: exp_001
+    exp_id: exp_002
     best_exp_id: exp_001
     seed: 46
   params:
@@ -19,5 +19,5 @@ xgboost:
     subsample: 1.0
     tree_method: gpu_hist
     random_state: 46
-    learning_rate: 0.1
-    n_estimators: 10000 # TODO
+    learning_rate: 0.025
+    n_estimators: 40000 # TODO
