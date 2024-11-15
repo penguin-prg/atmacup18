@@ -1,6 +1,7 @@
 import gc
 from typing import Any, Callable, Dict, List, Literal, Optional, Tuple, Union
 
+import lightgbm as lgb
 import numpy as np
 import optuna
 import polars as pl
@@ -102,8 +103,10 @@ def fit_lgb(
             X=data.filter(pl.col(fold_col) != val_fold).select(features.all_features()).to_numpy(),
             y=data.filter(pl.col(fold_col) != val_fold)[target_col].to_numpy(),
             eval_set=eval_set,
-            early_stopping_rounds=es_rounds,
-            verbose=verbose,
+            callbacks=[
+                lgb.early_stopping(stopping_rounds=es_rounds, verbose=True),
+                lgb.log_evaluation(verbose),
+            ],
         )
         models.append(model)
 

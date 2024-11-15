@@ -1,11 +1,23 @@
 wandb:
-  project: Template
+  project: atmaCup18
 
 dataset:
-  competition_dir: None # コンペの入力データ
+  competition_dir: /kaggle/input/atmaCup#18_dataset
+  train_fold_path: /kaggle/input/cv-split/train_folds.csv
 
-sample_model:
+xgboost:
   execution:
-    exp_id: exp_temp
-    best_exp_id: exp_temp
+    exp_id: exp_001
+    best_exp_id: exp_001
     seed: 46
+  params:
+    objective: reg:absoluteerror
+    max_depth: 7
+    colsample_bytree: 0.7
+    reg_alpha: 0.1
+    reg_lambda: 0.1
+    subsample: 1.0
+    tree_method: gpu_hist
+    random_state: 46
+    learning_rate: 0.1
+    n_estimators: 10000 # TODO
