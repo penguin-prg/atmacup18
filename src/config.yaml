@@ -21,3 +21,9 @@ xgboost:
     random_state: 46
     learning_rate: 0.025
     n_estimators: 40000 # TODO
+
+rulebase:
+  execution:
+    exp_id: exp_003
+    best_exp_id: exp_003
+    seed: 46
