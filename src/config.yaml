@@ -1,0 +1,11 @@
+wandb:
+  project: Template
+
+dataset:
+  competition_dir: None # コンペの入力データ
+
+sample_model:
+  execution:
+    exp_id: exp_temp
+    best_exp_id: exp_temp
+    seed: 46

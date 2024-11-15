@@ -1,0 +1,8 @@
+[yaml]
+editor.tabSize = 4
+
+
+[tool.ruff]
+line-length = 119
+indent-width = 4
+ignore = ["F401"]

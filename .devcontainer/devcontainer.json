@@ -1,0 +1,24 @@
+{
+  "name": "kaggle-docker",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "playground",
+  "workspaceFolder": "/kaggle",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "ms-python.python",
+        "ms-python.vscode-pylance", // ruffと被ってるけどipynbでruffは何故かipynbでハイライトされない
+        "charliermarsh.ruff",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "njpwerner.autodocstring",
+        "github.copilot",
+        "ms-toolsai.jupyter",
+        "aaron-bond.better-comments",
+        "usernamehw.errorlens"
+      ]
+    }
+  }
+}

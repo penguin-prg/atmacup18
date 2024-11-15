@@ -1,0 +1,21 @@
+version: "3"
+services:
+  playground:
+    container_name: "KAGGLE_TEMPLATE_v2"
+    hostname: "python"
+    build: .
+    shm_size: "54gb"
+    restart: always
+    working_dir: "/kaggle"
+    tty: true
+    volumes:
+      - type: bind
+        source: ../
+        target: /kaggle
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
