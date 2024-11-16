@@ -30,6 +30,16 @@ CATEGORY_MAPPING = {
         "y": 1,
         "z": 2,
     },
+    "traffic_class": {
+        "green": 0,
+        "yellow": 1,
+        "red": 2,
+        "straight": 3,
+        "left": 4,
+        "right": 5,
+        "empty": 6,
+        "other": 7,
+    },
 }
 
 TARGET_COLS = [
