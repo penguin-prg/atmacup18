@@ -5,26 +5,29 @@ dataset:
   competition_dir: /kaggle/input/atmaCup#18_dataset
   train_fold_path: /kaggle/input/cv-split/train_folds.csv
 
-xgboost:
+lightgbm:
   execution:
     exp_id: exp_006
     best_exp_id: exp_006
     seed: 46
   params:
-    objective: reg:absoluteerror
+    boosting_type: gbdt
+    objective: regression_l1
     max_depth: 7
     colsample_bytree: 0.7
     reg_alpha: 0.1
     reg_lambda: 0.1
     subsample: 1.0
-    tree_method: gpu_hist
-    random_state: 46
+    min_child_samples: 20
+    subsample_freq: 0
+    random_state: 42
     learning_rate: 0.025
-    n_estimators: 40000 # TODO
+    n_estimators: 1000000
+    verbosity: -1
 
 cnn:
   execution:
-    exp_id: exp_003
+    exp_id: exp_007
     best_exp_id: exp_003
     seed: 46
   optimizer:
