@@ -37,3 +37,12 @@ cnn:
     device: cuda
     monitor: valid_MeanAbsoluteError
     direction: minimize
+
+ensemble:
+  execution:
+    exp_id: ensemble_001
+    best_exp_id: ensemble_001
+    seed: 46
+  weights:
+    xgboost: 0.5
+    cnn: 0.5
