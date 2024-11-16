@@ -25,6 +25,11 @@ CATEGORY_MAPPING = {
         "y_5": 16,
         "z_5": 17,
     },
+    "xyz": {
+        "x": 0,
+        "y": 1,
+        "z": 2,
+    },
 }
 
 TARGET_COLS = [
