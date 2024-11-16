@@ -107,9 +107,7 @@ def add_scene_lag_features(
     """シーン内のラグ特徴量"""
     train = train.sort(["sceneID", "offset"])
     for c in basic_features:
-        for diff in range(-1, 0):
-            if diff == 0:
-                continue
+        for diff in [-1, 1]:
             train = train.with_columns(
                 pl.col(c).diff(n=diff).over("sceneID").alias(f"{c}_diff_{diff}"),
                 pl.col(c).diff(n=diff).over("sceneID").alias(f"{c}_shift_{diff}"),
@@ -123,7 +121,7 @@ def add_scene_agg_features(
     features: FeatureContena,
 ) -> Tuple[pl.DataFrame, FeatureContena]:
     """シーン内の集約特徴量"""
-    for c in features.num_features():
+    for c in basic_features:
         train = train.with_columns(
             pl.col(c).mean().over("sceneID").alias(f"{c}_mean"),
             pl.col(c).std().over("sceneID").alias(f"{c}_std"),
