@@ -22,8 +22,18 @@ xgboost:
     learning_rate: 0.025
     n_estimators: 40000 # TODO
 
-rulebase:
+cnn:
   execution:
     exp_id: exp_003
     best_exp_id: exp_003
     seed: 46
+  optimizer:
+    lr: 0.001
+    # weight_decay: 0.001
+  trainer:
+    max_epoch: 20
+    es_patience: 2
+    loss_window: 100000
+    device: cuda
+    monitor: valid_MeanAbsoluteError
+    direction: minimize
