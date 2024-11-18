@@ -7,3 +7,6 @@ RUN pip install pytest
 RUN pip install pre-commit
 
 # competition specific
+RUN pip install ultralytics
+RUN pip install einops
+RUN pip install bitsandbytes
