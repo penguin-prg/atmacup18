@@ -27,8 +27,8 @@ lightgbm:
 
 cnn:
   execution:
-    exp_id: exp_012
-    best_exp_id: exp_012
+    exp_id: exp_013
+    best_exp_id: exp_013
     seed: 46
   optimizer:
     lr: 0.01
