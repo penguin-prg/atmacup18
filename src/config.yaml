@@ -8,7 +8,7 @@ dataset:
 lightgbm:
   execution:
     exp_id: exp_016
-    best_exp_id: exp_015
+    best_exp_id: exp_016
     seed: 46
   params:
     boosting_type: gbdt
