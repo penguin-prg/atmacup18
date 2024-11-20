@@ -7,12 +7,13 @@ dataset:
 
 lightgbm:
   execution:
-    exp_id: exp_010
-    best_exp_id: exp_010
+    exp_id: exp_015
+    best_exp_id: exp_015
     seed: 46
   params:
     boosting_type: gbdt
-    objective: regression_l1
+    objective: regression
+    metric: mae
     max_depth: 7
     colsample_bytree: 0.7
     reg_alpha: 0.1
