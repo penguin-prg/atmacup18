@@ -7,8 +7,8 @@ dataset:
 
 lightgbm:
   execution:
-    exp_id: exp_017
-    best_exp_id: exp_017
+    exp_id: exp_021
+    best_exp_id: exp_exp_021
     seed: 46
   params:
     boosting_type: gbdt
@@ -22,7 +22,7 @@ lightgbm:
     min_child_samples: 20
     subsample_freq: 0
     random_state: 42
-    learning_rate: 0.01
+    learning_rate: 0.03
     n_estimators: 1000000
     verbosity: -1
 
