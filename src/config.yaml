@@ -7,8 +7,8 @@ dataset:
 
 lightgbm:
   execution:
-    exp_id: exp_017
-    best_exp_id: exp_017
+    exp_id: exp_023
+    best_exp_id: exp_023
     seed: 46
   params:
     boosting_type: gbdt
@@ -28,7 +28,7 @@ lightgbm:
 
 cnn:
   execution:
-    exp_id: exp_022
+    exp_id: exp_024
     best_exp_id: exp_022
     seed: 46
   optimizer:
