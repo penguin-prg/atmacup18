@@ -1,26 +1,38 @@
-# Kaggle-Template
+# #18 Turing × atmaCup, Xth Place Solution
 
-Kaggleで使用するテンプレートリポジトリ
+コンペ：https://www.guruguru.science/competitions/25/
 
-## Setup
+# 結果の再現
 
-1. setup.shを実行
-   ```
-   chmod 755 setup.sh
-   ./setup.sh
-   ```
-   - NOTE: git cloneでプライベートリポジトリを持ってくるので、権限がない人が使う場合はコメントアウトする
+## Hardware
 
-## ディレクトリ構成
+- CPU: Intel Core i9 13900KF (24 cores, 32 threads)
+- GPU: NVIDIA GeForce RTX 4090
+- RAM: 64GB
 
-- /kaggle
-  - .devcontainer/ : 環境構築
-  - .vscode/ : vscodeの設定ファイル
-  - input/ : データセット
-  - output/ : 実験結果の出力ディレクトリ
-  - working/ : 作業ディレクトリ（一時ファイルのみ）
-  - src/ : ソースコード
-    - config.yaml : 設定ファイル
-    - Penguin-ML-Library/ : MLプロジェクト用ライブラリ
-  - eda/ : EDAのnotebook
-  - train/ : 学習コード
+## OS/platform
+
+- WSL2 (version 2.0.9.0, Ubuntu 22.04.2 LTS)
+
+## 3rd-party software
+
+`/kaggle/.devcontainer`を確認してください。
+
+## Training
+
+1. [データセット]
+   - コンペデータを`/kaggle/input/atmaCup#18_dataset`に配置
+2. [前処理]
+   - `/kaggle/input/cv-split/split.ipynb`
+   - `/kaggle/input/depth_image/gen.ipynb`
+   - `/kaggle/input/depth_image/agg.ipynb`
+   - `/kaggle/input/table_image/gen.ipynb`
+   - `/kaggle/input/traffic_light/gen_df.ipynb`
+   - `/kaggle/input/yolo-det/trial_yolov11.ipynb`
+3. [学習]
+   - `/kaggle/train/cnn.ipynb`
+   - `/kaggle/train/lightgbm.ipynb`
+   - `/kaggle/train/xgboost.ipynb`
+   - `68ca3e36b490cc9ba88c0928020fb379e33f7e0d`に checkout した後、`/kaggle/train/cnn.ipynb`を再度実行
+   - `main`ブランチに戻って、`/kaggle/train/ensemble.ipynb`を実行
+   - -> `/kaggle/output/ensemble_001/submission.csv`が最終提出です
