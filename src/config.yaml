@@ -7,7 +7,7 @@ dataset:
 
 lightgbm:
   execution:
-    exp_id: exp_023
+    exp_id: exp_026
     best_exp_id: exp_023
     seed: 46
   params:
@@ -25,6 +25,12 @@ lightgbm:
     learning_rate: 0.01
     n_estimators: 1000000
     verbosity: -1
+
+xgboost:
+  execution:
+    exp_id: exp_025
+    best_exp_id: exp_025
+    seed: 46
 
 cnn:
   execution:
