@@ -1,6 +1,7 @@
-# #18 Turing × atmaCup, Xth Place Solution
+# #18 Turing × atmaCup, 23th Place Solution
 
 コンペ：https://www.guruguru.science/competitions/25/
+解法：https://www.guruguru.science/competitions/25/discussions/a48f1c6a-04ce-4502-b7c1-3601f16bd87c/
 
 # 結果の再現
 
